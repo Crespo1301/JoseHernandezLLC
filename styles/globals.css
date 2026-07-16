@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --green-dark:    #040403;
+  --green-mid:     #5B7553;
+  --green-base:    #8EB897;
+  --green-light:   #C3E8BD;
+  --green-accent:  #9DDBAD;
+
+  /* Semantic aliases */
+  --black:     var(--green-dark);
+  --charcoal:  #1a1f19;
+  --white:     #fff;
+  --gray:      #f4f7f4;
+  --text:      #1a1f19;
+  --muted:     #5a6b58;
+
+  --primary:        var(--green-mid);
+  --primary-dark:   #4a6244;
+  --primary-light:  var(--green-light);
+  --primary-accent: var(--green-accent);
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+
+.section-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+.section-label {
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: .5rem;
+}
+
+.section-title {
+  font-family: 'Lora', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  color: var(--text);
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+.section-sub {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 540px;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--primary);
+  color: var(--white);
+  padding: .85rem 2rem;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform .2s, box-shadow .2s, background .2s;
+  box-shadow: 0 4px 20px rgba(91,117,83,.35);
+  border: none;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(91,117,83,.45);
+  background: var(--primary-dark);
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,.1);
+  color: var(--white);
+  padding: .85rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,.35);
+  transition: background .2s;
+  display: inline-block;
+  backdrop-filter: blur(4px);
+  font-family: 'Nunito', sans-serif;
+}
+.btn-secondary:hover { background: rgba(255,255,255,.2); }
+
+.btn-dark {
+  background: var(--black);
+  color: var(--white);
+  padding: .85rem 2rem;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: background .2s;
+  font-family: 'Nunito', sans-serif;
+}
+.btn-dark:hover { background: #2a2f29; }
+
+/* CTA Banner */
+.cta-banner {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.cta-banner h2 {
+  font-family: 'Lora', serif;
+  font-size: 2.2rem;
+  margin-bottom: .8rem;
+}
+.cta-banner p {
+  color: rgba(255,255,255,.88);
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+.cta-phone {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Page hero (inner pages) */
+.page-hero {
+  background: var(--black);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(142,184,151,.15) 0%, transparent 65%);
+  pointer-events: none;
+}
+.page-hero h1 {
+  font-family: 'Lora', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: .8rem;
+  position: relative;
+}
+.page-hero p {
+  color: rgba(255,255,255,.75);
+  font-size: 1.1rem;
+  max-width: 520px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Image placeholder */
+.img-placeholder {
+  background: #e8ede8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #9aaa98;
+  font-size: 13px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  border: 2px dashed #c5d4c3;
+}

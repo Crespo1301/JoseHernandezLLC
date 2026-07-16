@@ -1,0 +1,17 @@
+.env.ai.local
+.mcp.json
+.env.local
+.env*.local
+
+node_modules/
+.next/
+out/
+dist/
+build/
+
+.agents/
+.claude/
+.code-review-graph/
+
+*.log
+.DS_Store
