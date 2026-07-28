@@ -11,8 +11,12 @@
     "stitch:proxy": "bash ./scripts/stitch-proxy.sh"
   },
   "dependencies": {
-    "next": "latest",
+    "next": "16.2.12",
     "react": "^18",
     "react-dom": "^18"
+  },
+  "overrides": {
+    "postcss": "8.5.24",
+    "sharp": "0.35.3"
   }
 }
