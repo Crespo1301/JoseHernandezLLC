@@ -4,24 +4,24 @@ Use the shared CSolutions Playwright runner for real browser screenshots before 
 
 ## Commands
 
-Start this repo's dev server first, then replace the URL below with the local URL and port for this project:
+Start this repo's dev server first. Canonical local URL: http://localhost:3005/.
 
 ```bash
 /home/cresp3/scripts/visual-check-init.sh .
-/home/cresp3/scripts/visual-check.sh --url http://localhost:3000/ --out .visual-checks/home-mobile.png
-/home/cresp3/scripts/visual-check.sh --desktop --url http://localhost:3000/ --out .visual-checks/home-desktop.png
+/home/cresp3/scripts/visual-check.sh --url http://localhost:3005/ --out .visual-checks/home-mobile.png
+/home/cresp3/scripts/visual-check.sh --desktop --url http://localhost:3005/ --out .visual-checks/home-desktop.png
 ```
 
 For a specific section, use a CSS selector:
 
 ```bash
-/home/cresp3/scripts/visual-check.sh --url http://localhost:3000/ --selector "main" --out .visual-checks/main-section.png
+/home/cresp3/scripts/visual-check.sh --url http://localhost:3005/ --selector "main" --out .visual-checks/main-section.png
 ```
 
 For tall pages, crop the full-page screenshot:
 
 ```bash
-/home/cresp3/scripts/visual-check.sh --desktop --url http://localhost:3000/ --out .visual-checks/full.png --ffmpeg-crop 1440:900:0:1200 --crop-out .visual-checks/section.png
+/home/cresp3/scripts/visual-check.sh --desktop --url http://localhost:3005/ --out .visual-checks/full.png --ffmpeg-crop 1440:900:0:1200 --crop-out .visual-checks/section.png
 ```
 
 ## Rule
